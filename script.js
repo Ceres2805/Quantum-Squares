@@ -7,8 +7,10 @@ const scorePlayer1 = document.getElementById('scorePlayer1');
 const scorePlayer2 = document.getElementById('scorePlayer2');
 const turnIndicator = document.getElementById('turnIndicator');
 
-// Load sound
+// Load sounds
 const moveSound = new Audio('move-sound.mp3'); // Ensure this path is correct
+const illegalMoveSound = new Audio('illegal-move-sound.mp3'); // Ensure this path is correct
+const backgroundMusic = new Audio('background-music.mp3'); // Ensure this path is correct
 
 // Function to create block display
 function updateBlockDisplay(index) {
@@ -45,6 +47,15 @@ blocks.forEach((_, index) => {
     blockList.appendChild(updateBlockDisplay(index));
 });
 
+// Start playing background music
+function playBackgroundMusic() {
+    backgroundMusic.loop = true; // Loop the music
+    backgroundMusic.volume = 0.5; // Adjust volume (0.0 to 1.0)
+    backgroundMusic.play().catch(error => {
+        console.error("Error playing background music:", error);
+    });
+}
+
 // Handle block click
 function handleBlockClick(index) {
     const playerKey = currentPlayer === 1 ? 'player1' : 'player2';
@@ -52,7 +63,8 @@ function handleBlockClick(index) {
 
     // Check if the block is occupied by the other player
     if (blocks[index][playerKey] === 0 && blocks[index][otherPlayerKey] > 0) {
-        alert("Cannot add pieces to an occupied block!");
+        playIllegalMoveSound();
+        console.log("Cannot add pieces to an occupied block!"); // Logging illegal move instead of alert
         return; // Exit if the block is occupied by the other player
     }
 
@@ -84,6 +96,12 @@ function switchPlayer() {
 // Play the move sound
 function playMoveSound() {
     const sound = moveSound.cloneNode(); // Create a new instance
+    sound.play();
+}
+
+// Play the illegal move sound
+function playIllegalMoveSound() {
+    const sound = illegalMoveSound.cloneNode(); // Create a new instance
     sound.play();
 }
 
@@ -166,3 +184,6 @@ function updateDisplay() {
 // Initial display update
 updateDisplay();
 turnIndicator.innerText = `Player ${currentPlayer}'s turn`; // Set initial turn display
+
+// Start playing background music
+playBackgroundMusic();
