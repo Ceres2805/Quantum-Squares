@@ -12,6 +12,11 @@ const moveSound = new Audio('move-sound.mp3'); // Ensure this path is correct
 const illegalMoveSound = new Audio('illegal-move-sound.mp3'); // Ensure this path is correct
 const backgroundMusic = new Audio('background-music.mp3'); // Ensure this path is correct
 
+// Set the volume for illegal move sound to be louder
+illegalMoveSound.volume = 1.0; // Maximum volume for error sound
+moveSound.volume = 0.2; // Adjust volume for move sound
+backgroundMusic.volume = 0.3; // Adjust volume for background music
+
 // Function to create block display
 function updateBlockDisplay(index) {
     const blockDiv = document.createElement('div');
