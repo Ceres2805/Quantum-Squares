@@ -32,6 +32,7 @@ body {
     grid-template-columns: repeat(5, 100px);
     gap: 15px;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .block {
@@ -74,10 +75,12 @@ body {
 
 @media (max-width: 600px) {
     .block-list {
-        grid-template-columns: repeat(3, 80px);
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
     }
     .block {
-        padding: 10px;
-        font-size: 0.9em;
+        width: 40px;
+        height: 40px;
+        padding: 8px;
     }
 }
