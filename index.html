@@ -1,18 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Squares ✨</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEJw0ff3qlUjx+fA24VZ9VnfPfxP2h9O2wXck2hvbv54l2v7Tx/5SzJd7f1yA" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
+
 <body>
-    <div class="output">
-        <div class="score" id="scorePlayer1">Player 1 Score: 0</div>
-        <div class="score" id="scorePlayer2">Player 2 Score: 0</div>
+    <div class="container">
+        <!-- Score and Turn Display -->
+        <div class="output row justify-content-center">
+            <div class="score col-md-4" id="scorePlayer1">Player 1 Score: 0</div>
+            <div class="score col-md-4" id="scorePlayer2">Player 2 Score: 0</div>
+        </div>
+
         <div class="turn" id="turnIndicator">Player 1's turn</div>
+
+        <div class="block-list mt-4" id="blockList"></div>
+
     </div>
-    <div class="block-list"></div>
+
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pzjw8f+ua7Kw1TIq0Xcc6C2hLw1jrzb6Ev5nFdFzjo3fnCexqSjpE8S5ktgwy9D7"
+        crossorigin="anonymous"></script>
+
+    <footer class="footer text-center py-5">
+        <p>@ceres2808</p>
+        <a href="https://github.com/your-repository">
+            <i class="fab fa-github fa-2x"></i>
+        </a>
+    </footer>
+
 </body>
 </html>
