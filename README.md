@@ -33,7 +33,3 @@ Quantum Squares is a web-based game where two players compete to dominate a grid
 ## Credits
 
 - Developed by [Ceres2805](https://github.com/Ceres2805)
-
-## License
-
-This project is licensed under the MIT License.
