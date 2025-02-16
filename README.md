@@ -28,7 +28,7 @@ Quantum Squares is a web-based game where two players compete to dominate a grid
     ```sh
     git clone https://github.com/Ceres2805/Quantum-Squares.git
     ```
-2. Open `index.html` in your web browser to start the game.
+2. Open [`index.html`](index.html) in your web browser to start the game.
 
 ## Credits
 
