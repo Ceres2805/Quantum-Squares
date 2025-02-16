@@ -20,7 +20,7 @@ Quantum Squares is a web-based game where two players compete to dominate a grid
 
 Check out the live demo of the game below:
 
-<iframe src="https://ceres2805.github.io/Quantum-Squares/" width="600" height="400"></iframe>
+<iframe src="https://raw.githubusercontent.com/Ceres2805/Quantum-Squares/main/index.html" width="600" height="400"></iframe>
 
 ## Technologies Used
 
