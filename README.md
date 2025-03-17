@@ -21,6 +21,7 @@ Quantum Squares is a web-based game where two players compete to dominate a grid
 - HTML
 - CSS
 - JavaScript
+- Bootstrap
 
 ## Setup
 
